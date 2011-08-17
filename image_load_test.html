@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script>
+
+     /* var imgs = [];$('img').each(function(i,img){imgs.push('\"'+img.src+'\"')});document.body.innerHTML = "["+imgs.join(",")+"]" */
+
+     var image_urls = ["http://c1.vikiassets.com/uploads/masthead/image/127/mh_460_340_6e49855203d136b9081cf5f9395accdc6a236e48.jpg", "http://c1.vikiassets.com/uploads/masthead/image/128/mh_460_340_a6c1bc040570db5a2dca06ce785171b4a41ae0f2.jpg", "http://c1.vikiassets.com/uploads/masthead/image/129/mh_460_340_b8418c29c99d53284574a3aa5d337697c73da1bb.jpg", "http://c1.vikiassets.com/uploads/masthead/image/106/mh_460_340_2b817c90a2560c987081f027d85766df1c47431b.jpg", "http://c0.vikiassets.com/uploads/masthead/image/95/mh_460_340_d9ffb1b5f2aea02c6e11c7c7d85c015ad93ec2dc.jpg", "http://c2.vikiassets.com/uploads/masthead/image/89/mh_460_340_2dd5b607bb6803c967b6295186368b5fbfd60b3b.jpg", "http://c0.vikiassets.com/uploads/masthead/image/120/mh_460_340_c7fcf6a8398e6fab0085791d8e40292d3c725480.jpg", "http://c2.vikiassets.com/uploads/masthead/image/88/mh_460_340_69b9dd04d1e19fb176bc75abd3e1172631bef82b.jpg", "http://c3.vikiassets.com/uploads/masthead/image/94/mh_460_340_09bada2310006c70cfcc5519226205dfccd9259e.jpg", "http://c2.vikiassets.com/uploads/masthead/image/83/mh_460_340_fbc6d88234da7813e1fbb8e15f5bf127b0dfccb3.jpg", "http://c0.vikiassets.com/uploads/masthead/image/33/mh_460_340_815faace1e001ef441e247512349120eb97b450e.jpg", "http://c1.vikiassets.com/uploads/masthead/image/80/mh_460_340_fe4dc49d949a190f437d2d197f340da0c98aeb21.jpg", "http://c3.vikiassets.com/uploads/masthead/image/79/mh_460_340_73335c714e44a79425d771e5333fbf5a5804ae7f.jpg", "http://c3.vikiassets.com/uploads/masthead/image/115/mh_460_340_dd995f8a819a7337a229eb85debd29c29225e59c.jpg", "http://c2.vikiassets.com/uploads/masthead/image/41/mh_460_340_de5722f1bd04b1e49254f5e94586ad0c6d5fd20f.jpg", "http://c3.vikiassets.com/uploads/masthead/image/13/mh_460_340_b4fbee01266a8f88c77bd9ca25d12aa20066ce55.jpg", "http://c3.vikiassets.com/uploads/masthead/image/11/mh_460_340_a1252ea95a1032c3ede901870b9ef293a7cd8353.jpg", "http://c2.vikiassets.com/uploads/masthead/image/14/mh_460_340_a3c9621b40afbd2e60463be96a7234992afc9b06.jpg", "http://c1.vikiassets.com/uploads/masthead/image/43/mh_460_340_1a2da6e4473872773102afc53a6c62bdb471c642.jpg", "http://c1.vikiassets.com/uploads/masthead/image/77/mh_460_340_ab475fc63b8a9b4223b775291503ae2842f0a699.jpg", "http://c3.vikiassets.com/uploads/channel/thumbnail/2161/c_220_160_1c811072876bbd512f9c84e747b319139cd8c0c1.jpg", "http://c1.vikiassets.com/uploads/channel/thumbnail/2839/c_220_160_a8aa6243c992d57cfc7d9727b293160b88d1c939.jpg", "http://c2.vikiassets.com/uploads/channel/thumbnail/2017/c_220_160_32f0553bc0316ca9b1240607b26671fd0449bb81.jpg", "http://c3.vikiassets.com/uploads/channel/thumbnail/2546/c_220_160_6f54e30e4e04dab2f5df6bfaf1a57cd0d08ecd99.jpg", "http://c2.vikiassets.com/uploads/channel/thumbnail/2908/c_220_160_c7b69c673f1aa2722a140e41a417a15d986785d8.jpg", "http://c2.vikiassets.com/uploads/channel/thumbnail/3170/c_220_160_4b5178ad3d814b3061ad3191843df1e3992c6d7f.jpg", "http://c3.vikiassets.com/uploads/channel/thumbnail/50/c_220_160_dee6eddafa01accc3caca927ed4263c23afff034.jpg", "http://c1.vikiassets.com/uploads/channel/thumbnail/3227/c_220_160_901f7f9b1a5c1b3e415c76ff46d2733d57127dde.png", "http://c1.vikiassets.com/uploads/channel/thumbnail/1479/c_220_160_5bec1a32dcd656be7ae41108bf397b5bdb34c217.jpg", "http://c3.vikiassets.com/uploads/channel/thumbnail/3228/c_220_160_447e41cfd2aaf4c554dc3c6e1a1afa61f4336223.png", "http://c0.vikiassets.com/uploads/channel/thumbnail/1783/c_220_160_b52e3405ad6c33b7df9f6cc64cd03a6740ab5e88.jpg", "http://c1.vikiassets.com/uploads/channel/thumbnail/2840/c_220_160_8301acf6d95e5924a6ac322e787b96dc4e6d5585.jpg", "http://c0.vikiassets.com/uploads/channel/thumbnail/504/c_220_160_195025f8fc1ccc56e1f03af8f46459a16e36cf0f.jpg", "http://c0.vikiassets.com/uploads/channel/thumbnail/3825/c_220_160_e0bed5a279cb1b005e21c6e258e9754795ba7869.jpg", "http://c2.vikiassets.com/uploads/channel/thumbnail/1227/c_220_160_2d36cd03ca9e8b1a34b48964b9f2768d47966619.jpg", "http://c0.vikiassets.com/uploads/channel/thumbnail/423/c_220_160_af054d3e33d559bc5fd63ac8b01fd87d7629dc69.jpg", "http://c0.vikiassets.com/uploads/post/thumbnail/9684/default_04439ef0c115d351839cfb1a48500eafdf541222.jpg", "http://c1.vikiassets.com/uploads/post/thumbnail/9634/default_ea0373f9abe29c1a2c96c85f28355603df353840.jpg", "http://c1.vikiassets.com/uploads/post/thumbnail/9608/default_d3d5650dea31214dbda7e0101a5b5aa13bfb5d22.jpg", "http://www.viki.com/images/twitter-b.png", "http://www.googleadservices.com/pagead/conversion/985405488/?random=1313483747466&cv=6&fst=1313483747466&num=1&fmt=3&value=0&label=ppduCIjv2AIQsLDw1QM&bg=666666&hl=en&guid=ON&u_h=1440&u_w=2560&u_ah=1414&u_aw=2560&u_cd=24&u_his=6&u_tz=480&u_java=true&u_nplug=4&u_nmime=78&url=http%3A//www.viki.com/"];
+
+     window.recorded_time = new Object();
+
+     var load_image =  function(img_url){
+
+       recorded_time[img_url] = {};
+       var wrapper_div = document.createElement("DIV");
+       var pending_text = document.createElement("p");
+       wrapper_div.appendChild(pending_text);
+       pending_text.innerHTML = "Pending ... "+img_url;
+       var image_tag = document.createElement("IMG");
+       image_tag.setAttribute("onLoad","update_finished_loading(this);");
+       image_tag.onload = function(){ update_finished_loading(this) };
+       wrapper_div.appendChild(image_tag);
+       window.recorded_time[img_url]['start_time'] = new Date().getTime();
+       image_tag.setAttribute("src",img_url);
+       document.body.appendChild(wrapper_div);
+     }
+
+     var update_finished_loading = function(img_dom){
+       var img_url = img_dom.getAttribute("src");
+       window.recorded_time[img_url]['end_time'] = new Date().getTime();
+       window.recorded_time[img_url]['time_taken'] = window.recorded_time[img_url]['end_time'] - window.recorded_time[img_url]['start_time'];
+       img_dom.parentNode.innerHTML = "it took "+recorded_time[img_url]['time_taken']+'ms';
+     }
+
+
+     var trigger_loading = function(){
+       document.body.innerHTML = "<h1> Total number of images are "+image_urls.length+"</h1>"
+       for(var i=0; i<image_urls.length; i++){
+        load_image(image_urls[i]);
+
+       }
+     }
+
+    </script>
+
+
+  </head>
+  <body onload="trigger_loading();">
+  </body>
+</html>
+
